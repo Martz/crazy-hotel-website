@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 BLACKPOOL MADHOUSE 🔥 | The ULTIMATE Party Experience!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Bungee+Outline&family=Bungee+Shade&family=Rubik+Glitch&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body class="chaos-mode">
+    <!-- Audio Controls -->
+    <div class="audio-controller">
+        <button id="toggleAudio" class="pulse-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <audio id="partyAudio" loop>
+            <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Retro VHS Effect Overlay -->
+    <div class="vhs-overlay"></div>
+    
+    <!-- Laser Beams -->
+    <div class="laser-container">
+        <div class="laser laser-1"></div>
+        <div class="laser laser-2"></div>
+        <div class="laser laser-3"></div>
+        <div class="laser laser-4"></div>
+        <div class="laser laser-5"></div>
+    </div>
+    
+    <!-- Glitter Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Disco Lights -->
+    <div class="disco-lights">
+        <div class="light light-1"></div>
+        <div class="light light-2"></div>
+        <div class="light light-3"></div>
+        <div class="light light-4"></div>
+        <div class="light light-5"></div>
+        <div class="light light-6"></div>
+        <div class="light light-7"></div>
+        <div class="light light-8"></div>
+    </div>
+
+    <!-- Cursor Trail -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <!-- Floating Objects -->
+    <div class="floating-objects">
+        <div class="float-item cocktail"><i class="fas fa-cocktail"></i></div>
+        <div class="float-item music"><i class="fas fa-music"></i></div>
+        <div class="float-item star"><i class="fas fa-star"></i></div>
+        <div class="float-item disco"><i class="fas fa-compact-disc"></i></div>
+        <div class="float-item fire"><i class="fas fa-fire"></i></div>
+        <div class="float-item pill"><span>💊</span></div>
+        <div class="float-item unicorn"><span>🦄</span></div>
+        <div class="float-item alien"><span>👽</span></div>
+    </div>
+
+    <header class="glitch-header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="madhouse-text"><span class="glitch-text" data-text="MADHOUSE">MADHOUSE</span> <span class="flash-text">BLACKPOOL</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="neon-link">HOME</a></li>
+                    <li><a href="#hotels" class="neon-link">CRAZY HOTELS</a></li>
+                    <li><a href="#events" class="neon-link">WILD PARTIES</a></li>
+                    <li><a href="#deals" class="neon-link">INSANE DEALS</a></li>
+                    <li><a href="#contact" class="neon-link">BOOK NOW!</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="glitch-overlay"></div>
+        <div id="matrix-canvas"></div>
+        <div class="container">
+            <h2 class="hero-title">ABSOLUTE <span class="chaos-text">MADNESS</span> AWAITS!</h2>
+            <p class="hero-subtitle">BLACKPOOL'S MOST INSANE PARTY HOTELS | NO SLEEP | ENDLESS PARTYING | PURE CHAOS!</p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn btn-wild shake-anim">GET CRAZY NOW!</a>
+                <a href="#events" class="btn btn-insane pulse-anim">SEE THE MADNESS!</a>
+            </div>
+            <div class="party-badges">
+                <div class="badge strobe-effect">
+                    <i class="fas fa-cocktail"></i>
+                    <span>24/7 PARTY</span>
+                </div>
+                <div class="badge strobe-effect">
+                    <i class="fas fa-volume-up"></i>
+                    <span>INSANE SOUND</span>
+                </div>
+                <div class="badge strobe-effect">
+                    <i class="fas fa-pills"></i>
+                    <span>FREE PAINKILLERS</span>
+                </div>
+                <div class="badge strobe-effect">
+                    <i class="fas fa-meteor"></i>
+                    <span>MIND = BLOWN</span>
+                </div>
+            </div>
+        </div>
+        <div class="video-background">
+            <div class="color-overlay"></div>
+        </div>
+        
+        <!-- 3D Rotating Cube -->
+        <div class="scene">
+            <div class="cube">
+                <div class="cube__face cube__face--front">🔥</div>
+                <div class="cube__face cube__face--back">🍹</div>
+                <div class="cube__face cube__face--right">💊</div>
+                <div class="cube__face cube__face--left">🎵</div>
+                <div class="cube__face cube__face--top">🦄</div>
+                <div class="cube__face cube__face--bottom">👽</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotels" class="hotels">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="OUR INSANE HOTELS">OUR INSANE HOTELS</h2>
+            <div class="hotel-grid">
+                <div class="hotel-card tilt-card">
+                    <div class="card-image" style="background-color: #ff00aa;">
+                        <i class="fas fa-syringe card-icon spin-anim"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-flicker">PSYCHEDELIC PALACE</h3>
+                        <p>Every surface is covered in glow-in-the-dark paint. Rooms spin. Walls breathe. Bathrooms change color based on your body temperature. Don't ask questions.</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-pills"></i> Tripping walls</span>
+                            <span><i class="fas fa-eye"></i> Optical illusion floors</span>
+                            <span><i class="fas fa-rainbow"></i> Color-changing everything</span>
+                        </div>
+                        <a href="#booking" class="btn btn-outline shake-anim">RISK IT!</a>
+                    </div>
+                </div>
+                
+                <div class="hotel-card tilt-card">
+                    <div class="card-image" style="background-color: #00ff77;">
+                        <i class="fas fa-skull-crossbones card-icon bounce-anim"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-flicker">BASS DROP MOTEL</h3>
+                        <p>The walls literally vibrate 24/7 with 50,000-watt speakers built into EVERY SURFACE. Your internal organs will never be the same. Noise complaints? LOL.</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-heartbeat"></i> Cardiac resync rooms</span>
+                            <span><i class="fas fa-volume-up"></i> 24/7 DJ battles</span>
+                            <span><i class="fas fa-drum"></i> Vibrating furniture</span>
+                        </div>
+                        <a href="#booking" class="btn btn-outline shake-anim">FEEL IT!</a>
+                    </div>
+                </div>
+                
+                <div class="hotel-card tilt-card">
+                    <div class="card-image" style="background-color: #ff3300;">
+                        <i class="fas fa-biohazard card-icon pulse-anim"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="text-flicker">CHAOS COMPOUND</h3>
+                        <p>No rules. No staff. No logic. Rooms randomly rotate. Beds disappear at sunrise. Showers dispense energy drinks. We lost the keys years ago.</p>
+                        <div class="hotel-features">
+                            <span><i class="fas fa-random"></i> Random room swaps</span>
+                            <span><i class="fas fa-door-open"></i> Mystery portals</span>
+                            <span><i class="fas fa-toilet"></i> Unpredictable plumbing</span>
+                        </div>
+                        <a href="#booking" class="btn btn-outline shake-anim">SURVIVE IT!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="MENTAL EVENTS">MENTAL EVENTS</h2>
+            <div class="events-slider">
+                <div class="event-card tilt-card">
+                    <div class="event-date strobe-effect">
+                        <span class="day">??</span>
+                        <span class="month">???</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="text-flicker">FOAM TSUNAMI</h3>
+                        <p>We flood the ENTIRE hotel with 20 feet of foam. Find your room if you can! Breathing optional. May dissolve certain fabrics and relationships.</p>
+                        <span class="event-location"><i class="fas fa-map-marker-alt"></i> All Hotels Simultaneously</span>
+                        <div class="event-warning">⚠️ SIGN WAIVER BEFORE ENTRY ⚠️</div>
+                    </div>
+                </div>
+                
+                <div class="event-card tilt-card">
+                    <div class="event-date strobe-effect">
+                        <span class="day">??</span>
+                        <span class="month">???</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="text-flicker">SENSORY DESTROYER</h3>
+                        <p>72-hour party with strobe lights, subsonic bass, and scent cannons. Your brain will reset to factory settings. Bring a change of personality.</p>
+                        <span class="event-location"><i class="fas fa-map-marker-alt"></i> The Void (Basement)</span>
+                        <div class="event-warning">⚠️ NO MEDICAL PERSONNEL ON SITE ⚠️</div>
+                    </div>
+                </div>
+                
+                <div class="event-card tilt-card">
+                    <div class="event-date strobe-effect">
+                        <span class="day">??</span>
+                        <span class="month">???</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="text-flicker">GRAVITY FAILURE</h3>
+                        <p>Our anti-gravity room defies physics and common sense. What's up? What's down? Who cares! Float around with hundreds of strangers and mysterious liquids!</p>
+                        <span class="event-location"><i class="fas fa-map-marker-alt"></i> The Upside Down Room</span>
+                        <div class="event-warning">⚠️ BYO SICK BAG ⚠️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deals" class="deals">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="CRAZY PACKAGES">CRAZY PACKAGES</h2>
+            <div class="deals-grid">
+                <div class="deal-card tilt-card">
+                    <div class="ribbon strobe-effect"><span>DANGEROUS</span></div>
+                    <h3 class="text-flicker">TOTAL BLACKOUT</h3>
+                    <div class="price">£666<span>/person</span></div>
+                    <ul class="deal-features">
+                        <li><i class="fas fa-check"></i> 3 nights (you'll remember 0)</li>
+                        <li><i class="fas fa-check"></i> All drinks tagged with "???"</li>
+                        <li><i class="fas fa-check"></i> Random room allocation nightly</li>
+                        <li><i class="fas fa-check"></i> Mystery pills with breakfast</li>
+                        <li><i class="fas fa-check"></i> New identity on checkout</li>
+                        <li><i class="fas fa-check"></i> Amnesia guaranteed</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-full shake-anim">RISK YOUR LIFE</a>
+                </div>
+                
+                <div class="deal-card tilt-card">
+                    <div class="ribbon strobe-effect"><span>INSANE</span></div>
+                    <h3 class="text-flicker">BRAIN MELTER</h3>
+                    <div class="price">£999<span>/person</span></div>
+                    <ul class="deal-features">
+                        <li><i class="fas fa-check"></i> 5 nights in sensory overload room</li>
+                        <li><i class="fas fa-check"></i> Personal strobe light</li>
+                        <li><i class="fas fa-check"></i> Walls that scream your name</li>
+                        <li><i class="fas fa-check"></i> Bathroom with existential crisis button</li>
+                        <li><i class="fas fa-check"></i> Meals delivered via trap door</li>
+                        <li><i class="fas fa-check"></i> Complimentary therapy session after</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-full shake-anim">DESTROY YOURSELF</a>
+                </div>
+                
+                <div class="deal-card tilt-card">
+                    <div class="ribbon strobe-effect"><span>LETHAL</span></div>
+                    <h3 class="text-flicker">THE BLACKPOOL ROULETTE</h3>
+                    <div class="price">£???<span>/soul</span></div>
+                    <ul class="deal-features">
+                        <li><i class="fas fa-check"></i> ??? nights (time becomes meaningless)</li>
+                        <li><i class="fas fa-check"></i> Room chosen by blindfolded dart throw</li>
+                        <li><i class="fas fa-check"></i> Mystery roommates appear randomly</li>
+                        <li><i class="fas fa-check"></i> Daily surprise "activities"</li>
+                        <li><i class="fas fa-check"></i> At least one wall is not real</li>
+                        <li><i class="fas fa-check"></i> You might wake up famous</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-full shake-anim">SURRENDER CONTROL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="SURVIVOR STORIES">SURVIVOR STORIES</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial tilt-card">
+                    <div class="quote">"I think I'm legally dead now? My hair fell out but I grew a third eye. Would recommend!!"</div>
+                    <div class="author">- Dave (?), Woke up in a different country</div>
+                </div>
+                <div class="testimonial tilt-card">
+                    <div class="quote">"The walls were breathing and my shoes kept laughing at me. Five stars, coming back with my parents!"</div>
+                    <div class="author">- Emma, Now lives in the ceiling</div>
+                </div>
+                <div class="testimonial tilt-card">
+                    <div class="quote">"I checked in as Robert and checked out as Moonchild. My accountant is furious but my spirit guide is thrilled."</div>
+                    <div class="author">- Formerly Robert, Current whereabouts unknown</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="PARTY EVIDENCE">PARTY EVIDENCE</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item tilt-card" style="background-color: #ff00aa;">
+                    <i class="fas fa-pill gallery-icon spin-anim"></i>
+                </div>
+                <div class="gallery-item tilt-card" style="background-color: #00ffcc;">
+                    <i class="fas fa-wine-bottle gallery-icon bounce-anim"></i>
+                </div>
+                <div class="gallery-item tilt-card" style="background-color: #ffcc00;">
+                    <i class="fas fa-cannabis gallery-icon pulse-anim"></i>
+                </div>
+                <div class="gallery-item tilt-card" style="background-color: #ff3300;">
+                    <i class="fas fa-meteor gallery-icon spin-anim"></i>
+                </div>
+                <div class="gallery-item tilt-card" style="background-color: #cc00ff;">
+                    <i class="fas fa-ghost gallery-icon bounce-anim"></i>
+                </div>
+                <div class="gallery-item tilt-card" style="background-color: #0099ff;">
+                    <i class="fas fa-bolt gallery-icon pulse-anim"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="RISK YOUR SANITY">RISK YOUR SANITY</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="neon-text">EMERGENCY HOTLINE</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt pulse-anim"></i>
+                        <span>01253-???-????? (NUMBER CHANGES HOURLY)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope pulse-anim"></i>
+                        <span>help@blackpoolmadhouse.wtf</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt pulse-anim"></i>
+                        <span>Look for the building that shouldn't exist, Blackpool, UK</span>
+                    </div>
+                    
+                    <h3 class="neon-text">FOLLOW THE MADNESS</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon strobe-effect"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon strobe-effect"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon strobe-effect"><i class="fab fa-snapchat"></i></a>
+                        <a href="#" class="social-icon strobe-effect"><i class="fas fa-biohazard"></i></a>
+                    </div>
+                </div>
+                
+                <div class="booking-form tilt-card">
+                    <h3 class="glow-text">SIGN YOUR LIFE AWAY</h3>
+                    <form id="booking" class="crazy-form">
+                        <div class="form-group">
+                            <label for="hotel">CHOOSE YOUR DOOM</label>
+                            <select id="hotel" name="hotel" required class="glitch-select">
+                                <option value="">-- SELECT PUNISHMENT --</option>
+                                <option value="psychedelic">PSYCHEDELIC PALACE</option>
+                                <option value="bass">BASS DROP MOTEL</option>
+                                <option value="chaos">CHAOS COMPOUND</option>
+                                <option value="random">SURPRISE ME (DANGEROUS)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkin">ENTER</label>
+                                <input type="date" id="checkin" name="checkin" required class="glitch-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout">ESCAPE (ATTEMPT)</label>
+                                <input type="date" id="checkout" name="checkout" required class="glitch-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">VICTIMS</label>
+                                <select id="adults" name="adults" required class="glitch-select">
+                                    <option value="1">1 (LONELY SACRIFICE)</option>
+                                    <option value="2" selected>2 (MUTUAL DESTRUCTION)</option>
+                                    <option value="3">3 (CROWD CHAOS)</option>
+                                    <option value="4">4 (TOTAL MAYHEM)</option>
+                                    <option value="5">5 (INSANITY LOVES COMPANY)</option>
+                                    <option value="6">6+ (MASS HYSTERIA)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="rooms">PANIC ROOMS</label>
+                                <select id="rooms" name="rooms" required class="glitch-select">
+                                    <option value="1" selected>1 (SARDINE STYLE)</option>
+                                    <option value="2">2 (ESCAPE HARDER)</option>
+                                    <option value="3">3 (TRIPLE THREAT)</option>
+                                    <option value="4">4+ (MAZE MODE)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="package">DESTRUCTION PACKAGE</label>
+                            <select id="package" name="package" class="glitch-select">
+                                <option value="">-- CHOOSE YOUR FATE --</option>
+                                <option value="blackout">TOTAL BLACKOUT</option>
+                                <option value="brain">BRAIN MELTER</option>
+                                <option value="roulette">THE BLACKPOOL ROULETTE</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">YOUR SOON-TO-BE-FORGOTTEN NAME</label>
+                            <input type="text" id="name" name="name" required class="glitch-input">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">EMAIL (FOR RANSOM DEMANDS)</label>
+                                <input type="email" id="email" name="email" required class="glitch-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">PHONE (FOR CRYPTIC 3AM CALLS)</label>
+                                <input type="tel" id="phone" name="phone" required class="glitch-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special">SPECIFIC FEARS WE CAN EXPLOIT</label>
+                            <textarea id="special" name="special" rows="3" placeholder="Tell us what terrifies you..." class="glitch-input"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I ACCEPT THAT MY CONSCIOUSNESS MAY BE PERMANENTLY ALTERED
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-book shake-anim">NO TURNING BACK!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="chaos-footer">
+        <div class="glitch-overlay"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="glow-text">BLACKPOOL MADHOUSE</h3>
+                    <p>We take no responsibility for: lost items, lost time, lost memories, lost sanity, dimensional shifts, personality changes, spontaneous tattoos, or unexplained piercings.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="text-flicker">PANIC LINKS</h3>
+                    <ul>
+                        <li><a href="#home" class="hover-shake">GROUND ZERO</a></li>
+                        <li><a href="#hotels" class="hover-shake">DANGER ZONES</a></li>
+                        <li><a href="#events" class="hover-shake">MASS HYSTERIA</a></li>
+                        <li><a href="#deals" class="hover-shake">SELF DESTRUCTION</a></li>
+                        <li><a href="#contact" class="hover-shake">POINT OF NO RETURN</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h3 class="text-flicker">GET BRAINWASHED</h3>
+                    <p>Subscribe for subliminal messaging and coded instructions</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your email address" class="glitch-input">
+                        <button type="submit" class="btn shake-anim">SUBMIT MIND</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 202? BLACKPOOL MADHOUSE. REALITY IS SUBJECTIVE. SANITY IS OPTIONAL. YOU WERE NEVER HERE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Party Mode Button -->
+    <div class="chaos-toggle">
+        <button id="toggleChaos" class="chaos-btn pulse-anim">
+            <i class="fas fa-radiation"></i> MAXIMUM CHAOS
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
